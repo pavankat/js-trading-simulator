@@ -123,9 +123,15 @@ $(function() {
 			}
 
 			//this will build the table dimensions
-			html += "<td id='" + prop + symbol + "'>"; 
-			html += obj[prop]; 
-			html += "</td>";
+			if (prop !== 'price') {
+				html += "<td id='" + prop + symbol + "'>"; 
+				html += obj[prop]; 
+				html += "</td>";
+			}else {
+				html += "<td id='" + prop + symbol + "'>"; 
+				html += "<span class='price'>" + obj[prop] + "</span>"; 
+				html += "</td>";	
+			}
 
 			/*
 			- if the td is price then add 
@@ -135,7 +141,7 @@ $(function() {
 			- manipulate the ids to be unique      
 			*/
 			if (prop === 'shares') {
-				html += "<td> <a href='#' class='btn btn-primary' id='" + symbol + "Buy" + "'>buy 1 share</a> </td> <td> <a href='#' class='btn btn-inverse' id='" + symbol + "Sell" + "'>sell 1 share</a> </td>";
+				html += "<td> <a href='#' class='buy' id='" + symbol + "Buy" + "'>buy 1 share</a> </td> <td> <a href='#' class='sell' id='" + symbol + "Sell" + "'>sell 1 share</a> </td>";
 			}
  	   }
  	   html += "</tr>";
@@ -173,7 +179,7 @@ $(function() {
 					
 
 					var roundedPrice = (obj[prop]).toFixed(2);
-					$('#'+prop+symbol).html(roundedPrice);
+					$('#'+prop+symbol).html("<span class='price'>" + roundedPrice + "</span>");
 				}
 			}
 		}

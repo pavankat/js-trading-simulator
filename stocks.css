@@ -1,3 +1,56 @@
-@import url('bootstrap/css/bootstrap.css'); 
-@import url('bootstrap/css/bootstrap-responsive.css');
+/* style for the table */
+table#myPortfolio {
+	border-width: 0 0 1px 1px;
+	border-collapse: collapse;
+	border-style: solid;	
+}
+	table, td{
+		border:1px solid black;
+	}
+
+	#myPortfolio td {
+		padding: 12px;
+	}
+
+/* styling the share price */
+.price {
+	/* Text Styles */
+	color: #006400;
+}
+
+/* buy and sell buttons */
+a{
+    /* Button Styles */
+    display: block;
+    height: 25px;
+    width: 100px;
+    border: 2px solid #000000;
+     
+    /* Text Styles */
+    color: #FFFFFF;
+    text-align: center;
+    font: bold 12px;
+    line-height: 25px;
+
+    /* Link Styles */
+	  text-decoration: none;
+}
+
+/* mouse over any link (buy and sell buttons) */
+a:hover {
+	background: #000000;
+}  
+
+/* mouse over buy button */
+a.buy {
+	background: #009900;
+}
+
+/* mouse over sell button */
+a.sell{
+	background: #FF0000;
+}
+
+
+
 
