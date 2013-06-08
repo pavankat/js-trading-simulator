@@ -1,7 +1,4 @@
-You are given a portfolio of $1,000 and five companies to play with. We'd like you to create a simple interface with the following functionalities:
+This is a stock trading game written in JavaScript and jQuery.
 
-	- Represent the portfolio value
-	- For each company, display name, symbol, price and quantity owned. For each companies, two buttons: buy and sell (if owned). Clicking 'Buy' buys one share, 'Sell' sells one share.
-	- Upon clicking a button, update the value of the portfolio, update the number of shares owned, and enable or disable the "sell" or "buy" buttons accordingly.
-	- Every 1 second, the program should randomly change the price for each company from a range of (+/- $0.10)
+You start out with $1000 and 5 Companies to buy. The price of the Companies changes every second and gets updated on the page in real time. You can see your portfolio value, your cash flow and your total net worth in real time too. 
 	
